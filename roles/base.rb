@@ -6,7 +6,6 @@ run_list(
   "recipe[ntp]",
   "recipe[build-essential]",
   "recipe[git]",
-  # "recipe[user::data_bag]",
   "recipe[bbox::users]"
 )
 
