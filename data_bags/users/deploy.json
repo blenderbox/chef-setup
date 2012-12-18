@@ -1,0 +1,7 @@
+{
+  "id": "deploy",
+  "groups": ["sysadmin"],
+  "ssh_keys": [
+    "ssh-rsa ..."
+  ]
+}

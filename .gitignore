@@ -1,0 +1,12 @@
+# Librarian files
+tmp
+cookbooks/*
+!cookbooks/.gitkeep
+
+# Vagrant files
+Vagrantfile
+.vagrant
+
+# Other
+*.py*
+.*.sw*
