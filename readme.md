@@ -7,7 +7,7 @@ plugin.
 
 # Setup
 1. Clone this repository to your computer:
-    `git clone git@github.com/.../`
+    `git clone git@github.com:blenderbox/chef-setup.git`
 
 2. Go into the cloned directory. This will initialize the RVM and
    install the necessary gems. If you don't have RVM installed, [install
@@ -49,7 +49,6 @@ plugin.
       will be added to (`sysadmin` is setup as a passwordless sudo
       group). Overwrite "ssh-rsa ...== some@email.com" with the contents
       of your public ssh key, found in `~/.ssh/id_*sa.pub`.
-
     * Next open `nodes/default.json`. This file tells chef what recipes
       to run on your server (also known as a node). In the `run_list`
       you'll find three roles which will run when you invoke chef. You
