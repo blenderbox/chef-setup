@@ -7,27 +7,35 @@ plugin.
 
 # Setup
 1. Clone this repository to your computer:
-    `git clone git@github.com:blenderbox/chef-setup.git`
+```bash
+$ git clone git@github.com:blenderbox/chef-setup.git
+```
 
 2. Go into the cloned directory. This will initialize the RVM and
    install the necessary gems. If you don't have RVM installed, [install
    it](https://rvm.io/rvm/install/), then go through the setup process, and
    finally cd out and back into the directory.
-    `cd chef-setup`
+```bash
+$ cd chef-setup
+```
 
 3. Now install all of the chef cookbooks, which are managed with
    `librarian`.
-    `librarian-chef install`
+```bash
+$ librarian-chef install
+```
 
 4. *Optional*: If you want to use this setup with Vagrant:
     * Install the vagrant gem.
-        `gem install vagrant`
-    * Add a vagrant box to use:
-        `vagrant box add precise64 http://files.vagrantup.com/precise64.box`
-    * Initialize the `precise64` box you just downloaded:
-        `vagrant init precise64`
-    * Start up your new vagrant box:
-        `vagrant up`
+    * Add a vagrant box to use.
+    * Initialize the `precise64` box you just downloaded.
+    * Start up your new vagrant box.
+```bash
+$ gem install vagrant
+$ vagrant box add precise64 http://files.vagrantup.com/precise64.box
+$ vagrant init precise64
+$ vagrant up
+```
 
       **Note**: The default connection string for vagrant is:
         `vagrant@127.0.0.1 -p 2222 -i ~/.vagrant.d/insecure_private_key`
@@ -38,7 +46,9 @@ plugin.
    chef. You can do this with the `knife prepare` command. This command
    takes the host information as an argument. *It will default to using
    your ssh configuration.*
-    `knife prepare user@host -p 22 -i ~/.ssh/my_id`
+```bash
+$ knife prepare user@host -p 22 -i ~/.ssh/my_id
+```
 
 2. Now your server has a chef installation on it, and it is ready to
    receive commands. Before we tell chef to install everything, we need
@@ -52,15 +62,18 @@ plugin.
     * Next open `nodes/default.json`. This file tells chef what recipes
       to run on your server (also known as a node). In the `run_list`
       you'll find three roles which will run when you invoke chef. You
-      can look at the code for each of these in `roles/<name>.rb`.
+      can look at the code for each of these in `roles/<name>.rb`.  
       * `base` installs the basics for a server, and sets up the
         `deploy` user you've defined.
       * `appserver` will install `nginx`, `memcached`, and `mysql`
         (both client and server).
       * `pythonapp` will install `python`, `pip`, and `virtualenv`.
 
+
 3. Now that you've added some customizations, you can go ahead and run:
-    `knife cook user@host -p 22 -i ~/.ssh/my_id nodes/default.json`
+```bash
+$ knife cook user@host -p 22 -i ~/.ssh/my_id nodes/default.json
+```
 
 4. Once this is finished running, you'll have a fully operational
    server.
