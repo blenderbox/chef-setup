@@ -36,8 +36,8 @@ $ vagrant box add precise64 http://files.vagrantup.com/precise64.box
 $ vagrant init precise64
 $ vagrant up
 ```
-
-      **Note**: The default connection string for vagrant is:
+      **Note**: To get the SSH connection string for the vagrant box,
+      you can run `$ vagrant ssh-config`. The default is:
         `vagrant@127.0.0.1 -p 2222 -i ~/.vagrant.d/insecure_private_key`
 
 
