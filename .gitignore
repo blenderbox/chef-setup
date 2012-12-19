@@ -4,9 +4,9 @@ cookbooks/*
 !cookbooks/.gitkeep
 
 # Vagrant files
-Vagrantfile
 .vagrant
 
 # Other
-*.py*
+fabfile.py*
+config.ssh
 .*.sw*

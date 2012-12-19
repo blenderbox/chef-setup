@@ -34,15 +34,6 @@ bbox_users.each do |login|
   username = login['id']
   home = "/home/#{username}"
 
-  # Create the user account
-  # user_account username do
-  #   home home
-  #   ssh_keys login['ssh_keys']
-  #   system_user true
-  #   create_group true
-  #   ssh_keygen true
-  # end
-
   # Install Janus
   if node['bbox']['users']['use_janus']
     vim_dir = "#{home}/.vim"
