@@ -49,7 +49,7 @@ $ knife prepare chef-setup -F config.ssh
 
 2. Now your server has a chef installation on it, and it is ready to
    receive commands. Before we tell chef to install everything, we need
-   to customize some settings. Check the available [customizations]("#customize")
+   to customize some settings. Check the available [customizations](#customize)
    below. At the very least, you'll have to add your pub key to
    `data_bags/users/deploy.json`.
 
