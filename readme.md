@@ -47,7 +47,7 @@ plugin.
       json file, which describes a user. The `id` and name of the file
       correspond to the username. `groups` is a list of groups the user
       will be added to (`sysadmin` is setup as a passwordless sudo
-      group). Overwrite "ssh-rsa ...== some@email.com" with the contents
+      group). Overwrite `ssh-rsa ...== some@email.com` with the contents
       of your public ssh key, found in `~/.ssh/id_*sa.pub`.
     * Next open `nodes/default.json`. This file tells chef what recipes
       to run on your server (also known as a node). In the `run_list`
