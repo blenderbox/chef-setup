@@ -86,11 +86,11 @@ and you don't want to use the `pythonapp` role, your json file would
 look something like this:
 ```json
 {
-  "run_list": [
-    "role[base]",
-    "role[appserver]",
-    "recipe[php]"
-  ]
+      "run_list": [
+         "role[base]",
+         "role[appserver]",
+         "recipe[php]"
+      ]
 }
 ```
 Here, you can also modify default attributes of a recipe or a role. If
@@ -99,7 +99,7 @@ inside the `default_attributes` call. For example, if you wanted to
 change the default shell for all users to sh:
 ```json
 {
-  "user": { "default_shell": "/bin/sh" },
-  "run_list": [...]
+      "user": { "default_shell": "/bin/sh" },
+      "run_list": [...]
 }
 ```
