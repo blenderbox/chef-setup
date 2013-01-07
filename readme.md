@@ -30,6 +30,7 @@ $ librarian-chef install
     * Install the vagrant gem.
     * Start up your new vagrant box.
     * Get the SSH connection string
+
 ```bash
 $ gem install vagrant
 $ vagrant up
